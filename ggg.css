@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+::-webkit-scrollbar{
+    background: rgb(141, 68, 214);
+    width: 14px;
+}
+::-webkit-scrollbar-thumb{
+    background: rgba(113, 99, 186,255);
+    border-radius: 10px 10px;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+    font-family: "Poppins",sans-serif;
+}
+body{
+    display: flex;
+    /*background-size: cover;
+    background-position: center;*/
+    overflow: hidden;
+}
+.sidebar{
+    position: sticky;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 110px;
+    height: 100vh;
+    padding: 0 1.7rem;
+    color: white;
+    overflow: hidden;
+    transition: all 0.5s linear;
+    background: rgba(113, 99, 186,255);
+}
+.sidebar:hover{
+    width: 240px;
+    transition: 0.5s;
+}
+.logo{
+    height: 80px;
+    padding: 16px;
+}
+.menu{
+    height: 88%;
+    position: relative;
+    list-style: none;
+    padding: 0;
+}
+.menu li{
+    padding: 1rem;
+    margin: 8px 0;
+    border-radius: 8px;
+    transition: all 0.5s ease-in-out;
+}
+.menu li:hover,
+.active {
+    background: #e0e0e058;
+}
+.menu a{
+    color: white;
+    font-size: 14px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+.menu a span{
+    overflow: hidden;
+}
+.menua a i {
+    font-size: 1.2rem;
+}
+.logout{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+.c{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s linear;
+}
+.c a{
+    transition: 0.3s linear;
+}
+.bodyy{
+    width: 100%;
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background: url(img.jpg) no-repeat;
+    
+    
+    /*background-color: rgb(96, 74, 207);*/
+    flex-direction: column;
+}
+.container{
+    position: relative;
+    max-width: 900px;
+    width: 100%;
+    border-radius: 6px;
+    padding: 30px;
+    margin: 0 15px;
+    background-color: white;
+    box-shadow: 0 50x 10px rgba(0,0,0,0.1);
+}
+.container header{
+    position: relative;
+    font-size: 20px;
+    font-weight: 600;
+    color: #333;
+}
+.container header::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    height: 3px;
+    width: 27px;
+    border-radius: 8px;
+    background-color: rgb(96, 74, 207);
+}
+.container form{
+    position: relative;
+    margin-top: 16px;
+    min-height: 490px;
+    background-color:#f2f2f2 ;
+}
+
+.container form .details{
+    margin-top: 30px;
+}
+.container form .title{
+    display: block;
+    margin-bottom: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    margin: 6px 0;
+    color: #333;
+}
+.container form .fields{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    flex-wrap: wrap;
+}
+.container form .fields .input-field{
+    display: flex;
+    flex-direction: column;
+    margin: 4px;
+    border: #2e2e2e;
+    border-width: 2px;
+}
+.fields .input-field.t1{
+    width: 250px;
+}
+.fields .input-field.t2{ 
+    width: 800px;   
+}
+.t1 label{
+    font-size: 15px;
+    font-weight: 500;
+    color: #2e2e2e;
+}
+.t2 label{
+    font-size: 17px;
+    font-weight: 500;
+    color: #2e2e2e;
+}
+.container form .fields .input-field input{
+    outline: none;
+    font-size: 14px;
+    font-weight: 400;
+    color: #333;
+    border-radius: 5px;
+    border: 1px solid #aaa;
+    padding: 0 15px;
+    height: 42px;
+    margin: 8px 0;
+
+}
+.t2 .input1 , .input2{
+    outline: none;
+    font-size: 14px;
+    font-weight: 400;
+    color: #333;
+    border-radius: 10px;
+    border: 1px solid #aaa;
+    padding: 15px 15px;
+    
+    margin: 8px 0;
+}
+.t1 .input2{
+    height: 110px;
+}
+.t2 .input1{
+    height: 250px;
+}
+.t2 .input2{
+    height: 200px;
+}
+.t2 .input1:is( :focus ,:valid ){
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+}
+.input-field input:is( :focus ,:valid ){
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+}
+.container form .nextBtn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 45px;
+    border-radius: 15px;
+    width: 200px;
+    background-color: rgba(113, 99, 186,255);
+    color: white;
+    margin: 25px 0;
+    font-size: 15px;
+    transition: all 0.3s linear;
+}
+form .nextBtn:hover{
+    background-color: rgb(96, 74, 207);
+}
+
